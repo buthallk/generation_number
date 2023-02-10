@@ -2,7 +2,9 @@
 
 namespace App\Drivers;
 
-class PdoConnectionDriverInterface extends \PDO implements ConnectionInterface
+use PDO;
+
+class PdoConnectionDriver extends PDO implements ConnectionInterface
 {
     protected static array $instances = [];
 

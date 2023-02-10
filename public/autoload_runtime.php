@@ -2,7 +2,7 @@
 
 use App\Container\DIContainer;
 use App\Drivers\ConnectionInterface;
-use App\Drivers\PdoConnectionDriverInterface;
+use App\Drivers\PdoConnectionDriver;
 use App\Http\Handlers\CreateGenerationNumberHandler;
 use App\Http\Handlers\CreateGenerationNumberHandlerInterface;
 use App\Http\Handlers\ShowGenerationNumberHandler;
@@ -21,7 +21,7 @@ $container = DIContainer::getInstance();
 
 $container->bind(
     ConnectionInterface::class,
-    PdoConnectionDriverInterface::getInstance($_ENV['DATABASE_DSN'], $_ENV['DATABASE_USER'], $_ENV['DATABASE_PASSWORD'])
+    PdoConnectionDriver::getInstance($_ENV['DATABASE_DSN'], $_ENV['DATABASE_USER'], $_ENV['DATABASE_PASSWORD'])
 );
 
 $container->bind(
