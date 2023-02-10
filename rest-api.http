@@ -1,0 +1,7 @@
+POST https://backend.localhost/api/v1/generationNumber/generate
+Accept: application/json
+
+<> 2023-02-10T090612.200.json
+<> 2023-02-10T090536.200.json
+<> 2023-02-10T090509.200.json
+
